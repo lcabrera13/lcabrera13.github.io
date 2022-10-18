@@ -1,0 +1,69 @@
+:root {
+    --background-color: #AEBDCA;
+    --font-color: #182747;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: url(../images/simple_shiny.svg) no-repeat fixed;
+    background-size: cover;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    height: 100vh;
+    font-family: 'Lato', sans-serif;
+}
+
+.container {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+h1, h3 {
+    color: var(--background-color);
+    text-align: center;
+}
+
+h1 {
+    font-size: 40px;
+}
+
+h3 {
+    font-size: 25px;
+}
+
+.countdown {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    align-content: center;
+}
+
+.card {
+    width: 120px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color);
+    border-radius: 10px;
+}
+
+p {
+    color: var(--font-color);
+    font-size: 40px;
+}
+
+span {
+    font-size: 20px;
+}
