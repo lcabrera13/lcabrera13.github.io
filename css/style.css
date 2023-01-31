@@ -1,69 +1,277 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 :root {
-    --background-color: #AEBDCA;
-    --font-color: #182747;
+    --blue: #0b3257;
+    --green: #14ba9c;
+    --white: #fbfdfd;
+    --gray: #737373;
+    --black: #1b1b1b;
 }
 
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
+html {
+    font-size: 62.5%;
+    font-family: 'Ubuntu', sans-serif;
+    scroll-behavior: smooth;
+}
+
 body {
-    background: url(../images/simple_shiny.svg) no-repeat fixed;
-    background-size: cover;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    height: 100vh;
-    font-family: 'Lato', sans-serif;
+    min-width: 320px;
+}
+
+header {
+    background-color: var(--blue);
+    color: var(--white);
+}
+
+header nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header nav .logo {
+    width: 80px;
+    height: 80px;
+}
+
+header nav ul {
+    display: none;
+    list-style: none;
+}
+
+header nav ul li a {
+    color: var(--white);
+    text-decoration: none;
+    width: 90px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+    font-weight: 300;
+}
+
+header nav ul li a:hover {
+    opacity: 1;
+    border: 1px solid var(--white);
+    font-weight: 700;
+}
+
+header nav ul li a.button {
+    color: var(--white);
+    border: 1px solid var(--white);
 }
 
 .container {
-    height: 100vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
+    gap: 10px;
 }
 
-h1, h3 {
-    color: var(--background-color);
+#presentation {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px 50px;
+}
+
+#presentation .container {
     text-align: center;
 }
 
-h1 {
-    font-size: 40px;
+#presentation h1 {
+    font-size: 4.0rem;
 }
 
-h3 {
-    font-size: 25px;
+#presentation h2 {
+    font-size: 3.0rem;
 }
 
-.countdown {
+#presentation p {
+    font-size: 1.8rem;
+}
+
+#presentation h1 span,
+#presentation h2 span {
+    color: var(--green);
+}
+
+#presentation .buttons-group {
     display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
+    flex-direction: row;
     justify-content: center;
-    align-content: center;
-}
-
-.card {
-    width: 120px;
-    height: 120px;
-    display: flex;
     align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+#presentation .buttons-group a {
+    width: 140px;
+    padding: 10px 20px;
+    text-decoration: none;
+    color: var(--white);
+    font-size: 1.5rem;
+}
+
+#presentation .buttons-group a:hover {
+    font-weight: 700;
+}
+
+#presentation .buttons-group a.button-contact-me {
+    background-color: var(--green);
+    border: 1px solid var(--green);
+}
+
+#presentation .buttons-group a.button-download-cv {
+    background-color: transparent;
+    border: 1px solid var(--white);
+}
+
+#presentation .buttons-group a.button-contact-me:hover,
+#presentation .buttons-group a.button-download-cv:hover {
+    background-color: var(--white);
+    color: var(--green);
+}
+
+#about-me {
+    background-color: var(--white);
+    color: var(--gray);
+    padding: 50px 50px;
+}
+
+#about-me h3 {
+    font-size: 2.5rem;
+}
+
+#about-me .about-me-detail {
+    display: flex;
     flex-direction: column;
-    justify-content: center;
-    background-color: var(--background-color);
-    border-radius: 10px;
+    gap: 5px;
 }
 
-p {
-    color: var(--font-color);
-    font-size: 40px;
+#about-me .about-me-detail p {
+    text-align: justify;
+    font-size: 1.3rem;
 }
 
-span {
-    font-size: 20px;
+#experience {
+    background-color: var(--blue);
+    color: var(--white);
+    padding: 50px 50px;
+}
+
+#experience h3 {
+    font-size: 2.5rem;
+}
+
+#experience .card-experience {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    background-color: var(--white);
+    color: var(--gray);
+    padding: 20px;
+    border-radius: 2px;
+}
+
+#experience .card-experience h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+#experience .card-experience p {
+    text-align: justify;
+    font-size: 1.3rem;
+}
+
+#experience .projects {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#experience .card-project {
+    color: var(--black);
+    padding: 20px;
+    border-radius: 2px;
+    border: 2px solid var(--green);
+}
+
+#experience .card-project p {
+    text-align: justify;
+}
+
+#experience .card-project ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 5px;
+    color: var(--white);
+    margin-top: 10px;
+}
+
+#experience .card-project ul li {
+    background-color: var(--green);
+    color: var(--black);
+    border-radius: 20px;
+    padding: 3px 10px;
+    font-size: 1.1rem;
+    font-weight: 400;
+}
+
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    text-align: center;
+    padding: 10px;
+}
+
+@media (min-width: 700px) {
+    header nav {
+        flex-direction: row;
+        padding: 0 50px;
+        justify-content: space-between;
+    }
+
+    header nav .logo {
+        width: 60px;
+        height: 60px;
+    }
+
+    header nav ul {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+    }
+
+    #presentation {
+        padding: 150px 50px;
+    }
+
+    #about-me {
+        padding: 150px 50px;
+    }
+}
+
+@media (min-width: 1024px) {
+    header nav {
+        max-width: 850px;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    .container {
+        max-width: 850px;
+        margin: 0 auto;
+    }
 }
